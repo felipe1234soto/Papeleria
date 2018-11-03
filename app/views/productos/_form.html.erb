@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div class="col-md-5">
+			<%= simple_form_for @producto, html: { class: 'form-group' } do |f| %>
+	  		<%= f.input :nombre, class:"form-control" %>
+	  		<%= f.input :cantidad, class:"form-control" %>
+	  		<%= f.input :precio_compra, class:"form-control" %>
+	  		<%= f.input :precio_venta, class:"form-control" %>
+	  		<%=image_tag @producto.image.url, class:"img-thumbnail", id:"image_preview"%>
+	  		<div class="custom-file">
+  				<%= f.file_field :image, class:"custom-file-input"%>
+ 					<label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+				</div>
+
+	  		<%= f.submit :Search, class:"btn btn-primary"%>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; 
+    // Loop render
+      f=files[0]
+     if (f.type.match('image.*')) {
+      var reader = new FileReader();
+      reader.onload = (function(theFile) {
+        return function(e) {
+          //alert(e.target.result);
+          var img = $('#image_preview');
+          img.attr('src', e.target.result);                  
+        };
+      })(f);
+
+      reader.readAsDataURL(f);
+    }
+  }
+  document.getElementById('producto_image').addEventListener('change', handleFileSelect, false);
+</script>

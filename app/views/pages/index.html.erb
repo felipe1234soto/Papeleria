@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class="row justify-content-md-end">
+    <h1 class="col-md-12">Productos</h1>
+    <nav class="navbar navbar-light bg-light">
+    <%= simple_form_for :producto,ur: pages_path, :method => 'get', html: { class: 'form-inline' } do |f| %>
+  	<%= f.search_field :producto, class:"form-control mr-sm-2" %>
+  	<%= f.submit :Search, class: "btn btn-outline-success my-2 my-sm-0"%>
+	<% end %>
+</nav>
+  </div>
+  <div class="row justify-content-md-center">
+   <div class="col">
+      <%=render partial: 'list_products'%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class='container'>
+  <div class="row justify-content-md-end">
+    <h1 class="col-md-12">Eventos</h1>
+    <div class="col-md-4">
+      <%= link_to 'Nuevo', new_producto_path, class:'btn btn-success' %>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+   <div class="col">
+      <%=render partial: 'list_productos'%>
+    </div>
+  </div>
+</div>
