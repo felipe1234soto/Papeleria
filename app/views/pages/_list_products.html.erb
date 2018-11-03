@@ -1,0 +1,14 @@
+
+
+
+<div class="card-columns">
+  <% @productos.each do |producto| %>
+    <div class="card">
+      <%= image_tag producto.image.url, class:"card-img-top"%>
+      <div class="card-body">
+        <h5 class="card-title"><%=producto.nombre%></h5>
+        <p class="card-text">$<%=producto.precio_venta%></p>
+      </div>
+    </div>
+  <% end %>
+</div>

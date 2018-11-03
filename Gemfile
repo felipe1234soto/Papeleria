@@ -64,3 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ########################
 gem "paperclip", "~> 6.0.0"
 gem 'devise'
+gem 'popper_js', '~> 1.14.3'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
+gem 'simple_form'

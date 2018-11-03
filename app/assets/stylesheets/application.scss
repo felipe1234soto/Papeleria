@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+/*scroll in the table*/
+
+  .scrolls{
+
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .scrolls tbody{
+    padding: 20px;
+    display:block;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 400px;
+  }
+
+  .scrolls thead tr {
+     display: block;
+  }
+img {
+    max-width: 84px;
+    max-height: 84px;
+}
