@@ -1,4 +1,5 @@
 class ProductosController < ApplicationController
+	before_action :authenticate_administrador!
 	before_action :set_producto, except:[:index,:create,:new]
 
   def index
