@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def search(search)
     if search && search != ""
-     Producto.where(nombre: search)
+     Producto.where("nombre LIKE ?", "%#{search}%")
     else
       Producto.all
     end
