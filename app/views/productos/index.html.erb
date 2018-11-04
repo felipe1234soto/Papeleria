@@ -1,7 +1,8 @@
     <!-- Just an image -->
 <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">
-    <%=image_tag 'logopapeleria.png',width:"30", height:"30"%>
+    <%=image_tag 'logopapeleria.png',width:"50", height:"50"%>
+    Papeleria
   </a>
   <ul class="navbar-nav">
       <li class="nav-item active">
@@ -12,13 +13,15 @@
 <div class='container'>
   <div class="row justify-content-md-end">
     <h1 class="col-md-12">Eventos</h1>
-    <div class="col-md-4">
-      <%= link_to 'Nuevo', new_producto_path, class:'btn btn-success' %>
-    </div>
   </div>
   <div class="row justify-content-md-center">
    <div class="col">
       <%=render partial: 'list_productos'%>
+    </div>
+  </div>
+  <div class="row justify-content-md-end">
+    <div class="col-md-1">
+      <%= link_to 'Nuevo', new_producto_path, class:'btn btn-success' %>
     </div>
   </div>
 </div>
